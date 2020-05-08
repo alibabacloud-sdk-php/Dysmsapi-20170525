@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class SendBatchSmsRequest extends Model
+class QuerySendDetailsRequest extends Model
 {
     /**
      * @description appKey
@@ -37,56 +37,57 @@ class SendBatchSmsRequest extends Model
     public $resourceOwnerId;
 
     /**
-     * @description phoneNumberJson
+     * @description phoneNumber
      *
      * @var string
      */
-    public $phoneNumberJson;
+    public $phoneNumber;
 
     /**
-     * @description signNameJson
+     * @description bizId
      *
      * @var string
      */
-    public $signNameJson;
+    public $bizId;
 
     /**
-     * @description templateCode
+     * @description sendDate
      *
      * @var string
      */
-    public $templateCode;
+    public $sendDate;
 
     /**
-     * @description templateParamJsonNew
+     * @description pageSize
      *
-     * @var string
+     * @var int
      */
-    public $templateParamJson;
+    public $pageSize;
 
     /**
-     * @description smsUpExtendCodeJson
+     * @description currentPage
      *
-     * @var string
+     * @var int
      */
-    public $smsUpExtendCodeJson;
+    public $currentPage;
     protected $_name = [
         'accessKeyId'          => 'AccessKeyId',
         'ownerId'              => 'OwnerId',
         'resourceOwnerAccount' => 'ResourceOwnerAccount',
         'resourceOwnerId'      => 'ResourceOwnerId',
-        'phoneNumberJson'      => 'PhoneNumberJson',
-        'signNameJson'         => 'SignNameJson',
-        'templateCode'         => 'TemplateCode',
-        'templateParamJson'    => 'TemplateParamJson',
-        'smsUpExtendCodeJson'  => 'SmsUpExtendCodeJson',
+        'phoneNumber'          => 'PhoneNumber',
+        'bizId'                => 'BizId',
+        'sendDate'             => 'SendDate',
+        'pageSize'             => 'PageSize',
+        'currentPage'          => 'CurrentPage',
     ];
 
     public function validate()
     {
-        Model::validateRequired('phoneNumberJson', $this->phoneNumberJson, true);
-        Model::validateRequired('signNameJson', $this->signNameJson, true);
-        Model::validateRequired('templateCode', $this->templateCode, true);
+        Model::validateRequired('phoneNumber', $this->phoneNumber, true);
+        Model::validateRequired('sendDate', $this->sendDate, true);
+        Model::validateRequired('pageSize', $this->pageSize, true);
+        Model::validateRequired('currentPage', $this->currentPage, true);
     }
 
     public function toMap()
@@ -96,11 +97,11 @@ class SendBatchSmsRequest extends Model
         $res['OwnerId']              = $this->ownerId;
         $res['ResourceOwnerAccount'] = $this->resourceOwnerAccount;
         $res['ResourceOwnerId']      = $this->resourceOwnerId;
-        $res['PhoneNumberJson']      = $this->phoneNumberJson;
-        $res['SignNameJson']         = $this->signNameJson;
-        $res['TemplateCode']         = $this->templateCode;
-        $res['TemplateParamJson']    = $this->templateParamJson;
-        $res['SmsUpExtendCodeJson']  = $this->smsUpExtendCodeJson;
+        $res['PhoneNumber']          = $this->phoneNumber;
+        $res['BizId']                = $this->bizId;
+        $res['SendDate']             = $this->sendDate;
+        $res['PageSize']             = $this->pageSize;
+        $res['CurrentPage']          = $this->currentPage;
 
         return $res;
     }
@@ -108,7 +109,7 @@ class SendBatchSmsRequest extends Model
     /**
      * @param array $map
      *
-     * @return SendBatchSmsRequest
+     * @return QuerySendDetailsRequest
      */
     public static function fromMap($map = [])
     {
@@ -125,20 +126,20 @@ class SendBatchSmsRequest extends Model
         if (isset($map['ResourceOwnerId'])) {
             $model->resourceOwnerId = $map['ResourceOwnerId'];
         }
-        if (isset($map['PhoneNumberJson'])) {
-            $model->phoneNumberJson = $map['PhoneNumberJson'];
+        if (isset($map['PhoneNumber'])) {
+            $model->phoneNumber = $map['PhoneNumber'];
         }
-        if (isset($map['SignNameJson'])) {
-            $model->signNameJson = $map['SignNameJson'];
+        if (isset($map['BizId'])) {
+            $model->bizId = $map['BizId'];
         }
-        if (isset($map['TemplateCode'])) {
-            $model->templateCode = $map['TemplateCode'];
+        if (isset($map['SendDate'])) {
+            $model->sendDate = $map['SendDate'];
         }
-        if (isset($map['TemplateParamJson'])) {
-            $model->templateParamJson = $map['TemplateParamJson'];
+        if (isset($map['PageSize'])) {
+            $model->pageSize = $map['PageSize'];
         }
-        if (isset($map['SmsUpExtendCodeJson'])) {
-            $model->smsUpExtendCodeJson = $map['SmsUpExtendCodeJson'];
+        if (isset($map['CurrentPage'])) {
+            $model->currentPage = $map['CurrentPage'];
         }
 
         return $model;

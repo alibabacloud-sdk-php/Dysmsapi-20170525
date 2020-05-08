@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class QuerySmsSignRequest extends Model
+class AddSmsTemplateRequest extends Model
 {
     /**
      * @description appKey
@@ -37,22 +37,49 @@ class QuerySmsSignRequest extends Model
     public $resourceOwnerId;
 
     /**
-     * @description signName
+     * @description templateType
+     *
+     * @var int
+     */
+    public $templateType;
+
+    /**
+     * @description templateName
      *
      * @var string
      */
-    public $signName;
+    public $templateName;
+
+    /**
+     * @description templateContent
+     *
+     * @var string
+     */
+    public $templateContent;
+
+    /**
+     * @description remark
+     *
+     * @var string
+     */
+    public $remark;
     protected $_name = [
         'accessKeyId'          => 'AccessKeyId',
         'ownerId'              => 'OwnerId',
         'resourceOwnerAccount' => 'ResourceOwnerAccount',
         'resourceOwnerId'      => 'ResourceOwnerId',
-        'signName'             => 'SignName',
+        'templateType'         => 'TemplateType',
+        'templateName'         => 'TemplateName',
+        'templateContent'      => 'TemplateContent',
+        'remark'               => 'Remark',
     ];
 
     public function validate()
     {
-        Model::validateRequired('signName', $this->signName, true);
+        Model::validateRequired('templateType', $this->templateType, true);
+        Model::validateRequired('templateName', $this->templateName, true);
+        Model::validateRequired('templateContent', $this->templateContent, true);
+        Model::validateRequired('remark', $this->remark, true);
     }
 
     public function toMap()
@@ -62,7 +89,10 @@ class QuerySmsSignRequest extends Model
         $res['OwnerId']              = $this->ownerId;
         $res['ResourceOwnerAccount'] = $this->resourceOwnerAccount;
         $res['ResourceOwnerId']      = $this->resourceOwnerId;
-        $res['SignName']             = $this->signName;
+        $res['TemplateType']         = $this->templateType;
+        $res['TemplateName']         = $this->templateName;
+        $res['TemplateContent']      = $this->templateContent;
+        $res['Remark']               = $this->remark;
 
         return $res;
     }
@@ -70,7 +100,7 @@ class QuerySmsSignRequest extends Model
     /**
      * @param array $map
      *
-     * @return QuerySmsSignRequest
+     * @return AddSmsTemplateRequest
      */
     public static function fromMap($map = [])
     {
@@ -87,8 +117,17 @@ class QuerySmsSignRequest extends Model
         if (isset($map['ResourceOwnerId'])) {
             $model->resourceOwnerId = $map['ResourceOwnerId'];
         }
-        if (isset($map['SignName'])) {
-            $model->signName = $map['SignName'];
+        if (isset($map['TemplateType'])) {
+            $model->templateType = $map['TemplateType'];
+        }
+        if (isset($map['TemplateName'])) {
+            $model->templateName = $map['TemplateName'];
+        }
+        if (isset($map['TemplateContent'])) {
+            $model->templateContent = $map['TemplateContent'];
+        }
+        if (isset($map['Remark'])) {
+            $model->remark = $map['Remark'];
         }
 
         return $model;

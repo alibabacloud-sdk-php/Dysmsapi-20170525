@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class AddSmsSignRequest extends Model
+class SendSmsRequest extends Model
 {
     /**
      * @description appKey
@@ -37,6 +37,13 @@ class AddSmsSignRequest extends Model
     public $resourceOwnerId;
 
     /**
+     * @description phoneNumbers
+     *
+     * @var string
+     */
+    public $phoneNumbers;
+
+    /**
      * @description signName
      *
      * @var string
@@ -44,42 +51,50 @@ class AddSmsSignRequest extends Model
     public $signName;
 
     /**
-     * @description signSource
-     *
-     * @var int
-     */
-    public $signSource;
-
-    /**
-     * @description signFileList
-     *
-     * @var array
-     */
-    public $signFileList;
-
-    /**
-     * @description remark
+     * @description templateCode
      *
      * @var string
      */
-    public $remark;
+    public $templateCode;
+
+    /**
+     * @description templateParam
+     *
+     * @var string
+     */
+    public $templateParam;
+
+    /**
+     * @description smsUpExtendCode
+     *
+     * @var string
+     */
+    public $smsUpExtendCode;
+
+    /**
+     * @description outId
+     *
+     * @var string
+     */
+    public $outId;
     protected $_name = [
         'accessKeyId'          => 'AccessKeyId',
         'ownerId'              => 'OwnerId',
         'resourceOwnerAccount' => 'ResourceOwnerAccount',
         'resourceOwnerId'      => 'ResourceOwnerId',
+        'phoneNumbers'         => 'PhoneNumbers',
         'signName'             => 'SignName',
-        'signSource'           => 'SignSource',
-        'signFileList'         => 'SignFileList',
-        'remark'               => 'Remark',
+        'templateCode'         => 'TemplateCode',
+        'templateParam'        => 'TemplateParam',
+        'smsUpExtendCode'      => 'SmsUpExtendCode',
+        'outId'                => 'OutId',
     ];
 
     public function validate()
     {
+        Model::validateRequired('phoneNumbers', $this->phoneNumbers, true);
         Model::validateRequired('signName', $this->signName, true);
-        Model::validateRequired('signSource', $this->signSource, true);
-        Model::validateRequired('signFileList', $this->signFileList, true);
-        Model::validateRequired('remark', $this->remark, true);
+        Model::validateRequired('templateCode', $this->templateCode, true);
     }
 
     public function toMap()
@@ -89,16 +104,12 @@ class AddSmsSignRequest extends Model
         $res['OwnerId']              = $this->ownerId;
         $res['ResourceOwnerAccount'] = $this->resourceOwnerAccount;
         $res['ResourceOwnerId']      = $this->resourceOwnerId;
+        $res['PhoneNumbers']         = $this->phoneNumbers;
         $res['SignName']             = $this->signName;
-        $res['SignSource']           = $this->signSource;
-        $res['SignFileList']         = [];
-        if (null !== $this->signFileList && \is_array($this->signFileList)) {
-            $n = 0;
-            foreach ($this->signFileList as $item) {
-                $res['SignFileList'][$n++] = null !== $item ? $item->toMap() : $item;
-            }
-        }
-        $res['Remark'] = $this->remark;
+        $res['TemplateCode']         = $this->templateCode;
+        $res['TemplateParam']        = $this->templateParam;
+        $res['SmsUpExtendCode']      = $this->smsUpExtendCode;
+        $res['OutId']                = $this->outId;
 
         return $res;
     }
@@ -106,7 +117,7 @@ class AddSmsSignRequest extends Model
     /**
      * @param array $map
      *
-     * @return AddSmsSignRequest
+     * @return SendSmsRequest
      */
     public static function fromMap($map = [])
     {
@@ -123,23 +134,23 @@ class AddSmsSignRequest extends Model
         if (isset($map['ResourceOwnerId'])) {
             $model->resourceOwnerId = $map['ResourceOwnerId'];
         }
+        if (isset($map['PhoneNumbers'])) {
+            $model->phoneNumbers = $map['PhoneNumbers'];
+        }
         if (isset($map['SignName'])) {
             $model->signName = $map['SignName'];
         }
-        if (isset($map['SignSource'])) {
-            $model->signSource = $map['SignSource'];
+        if (isset($map['TemplateCode'])) {
+            $model->templateCode = $map['TemplateCode'];
         }
-        if (isset($map['SignFileList'])) {
-            if (!empty($map['SignFileList'])) {
-                $model->signFileList = [];
-                $n                   = 0;
-                foreach ($map['SignFileList'] as $item) {
-                    $model->signFileList[$n++] = null !== $item ? AddSmsSignRequest\signFileList::fromMap($item) : $item;
-                }
-            }
+        if (isset($map['TemplateParam'])) {
+            $model->templateParam = $map['TemplateParam'];
         }
-        if (isset($map['Remark'])) {
-            $model->remark = $map['Remark'];
+        if (isset($map['SmsUpExtendCode'])) {
+            $model->smsUpExtendCode = $map['SmsUpExtendCode'];
+        }
+        if (isset($map['OutId'])) {
+            $model->outId = $map['OutId'];
         }
 
         return $model;

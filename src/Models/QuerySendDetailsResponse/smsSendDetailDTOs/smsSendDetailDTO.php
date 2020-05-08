@@ -2,7 +2,7 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi\QuerySendDetailsResponse\smsSendDetailDTOs;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models\QuerySendDetailsResponse\smsSendDetailDTOs;
 
 use AlibabaCloud\Tea\Model;
 

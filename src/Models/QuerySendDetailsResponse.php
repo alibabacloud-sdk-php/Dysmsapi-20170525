@@ -2,9 +2,9 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
-use AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi\QuerySendDetailsResponse\smsSendDetailDTOs;
+use AlibabaCloud\SDK\Dysmsapi\V20170525\Models\QuerySendDetailsResponse\smsSendDetailDTOs;
 use AlibabaCloud\Tea\Model;
 
 class QuerySendDetailsResponse extends Model
@@ -93,7 +93,7 @@ class QuerySendDetailsResponse extends Model
             $model->totalCount = $map['TotalCount'];
         }
         if (isset($map['SmsSendDetailDTOs'])) {
-            $model->smsSendDetailDTOs = QuerySendDetailsResponse\smsSendDetailDTOs::fromMap($map['SmsSendDetailDTOs']);
+            $model->smsSendDetailDTOs = smsSendDetailDTOs::fromMap($map['SmsSendDetailDTOs']);
         }
 
         return $model;

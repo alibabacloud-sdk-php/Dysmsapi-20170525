@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class AddSmsTemplateResponse extends Model
+class SendBatchSmsResponse extends Model
 {
     /**
      * @description requestId
@@ -20,7 +20,7 @@ class AddSmsTemplateResponse extends Model
      *
      * @var string
      */
-    public $templateCode;
+    public $bizId;
 
     /**
      * @description code
@@ -36,27 +36,27 @@ class AddSmsTemplateResponse extends Model
      */
     public $message;
     protected $_name = [
-        'requestId'    => 'RequestId',
-        'templateCode' => 'TemplateCode',
-        'code'         => 'Code',
-        'message'      => 'Message',
+        'requestId' => 'RequestId',
+        'bizId'     => 'BizId',
+        'code'      => 'Code',
+        'message'   => 'Message',
     ];
 
     public function validate()
     {
         Model::validateRequired('requestId', $this->requestId, true);
-        Model::validateRequired('templateCode', $this->templateCode, true);
+        Model::validateRequired('bizId', $this->bizId, true);
         Model::validateRequired('code', $this->code, true);
         Model::validateRequired('message', $this->message, true);
     }
 
     public function toMap()
     {
-        $res                 = [];
-        $res['RequestId']    = $this->requestId;
-        $res['TemplateCode'] = $this->templateCode;
-        $res['Code']         = $this->code;
-        $res['Message']      = $this->message;
+        $res              = [];
+        $res['RequestId'] = $this->requestId;
+        $res['BizId']     = $this->bizId;
+        $res['Code']      = $this->code;
+        $res['Message']   = $this->message;
 
         return $res;
     }
@@ -64,7 +64,7 @@ class AddSmsTemplateResponse extends Model
     /**
      * @param array $map
      *
-     * @return AddSmsTemplateResponse
+     * @return SendBatchSmsResponse
      */
     public static function fromMap($map = [])
     {
@@ -72,8 +72,8 @@ class AddSmsTemplateResponse extends Model
         if (isset($map['RequestId'])) {
             $model->requestId = $map['RequestId'];
         }
-        if (isset($map['TemplateCode'])) {
-            $model->templateCode = $map['TemplateCode'];
+        if (isset($map['BizId'])) {
+            $model->bizId = $map['BizId'];
         }
         if (isset($map['Code'])) {
             $model->code = $map['Code'];

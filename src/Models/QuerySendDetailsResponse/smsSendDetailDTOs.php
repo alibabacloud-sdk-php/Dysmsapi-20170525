@@ -2,8 +2,9 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi\QuerySendDetailsResponse;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models\QuerySendDetailsResponse;
 
+use AlibabaCloud\SDK\Dysmsapi\V20170525\Models\QuerySendDetailsResponse\smsSendDetailDTOs\smsSendDetailDTO;
 use AlibabaCloud\Tea\Model;
 
 class smsSendDetailDTOs extends Model
@@ -50,7 +51,7 @@ class smsSendDetailDTOs extends Model
                 $model->smsSendDetailDTO = [];
                 $n                       = 0;
                 foreach ($map['SmsSendDetailDTO'] as $item) {
-                    $model->smsSendDetailDTO[$n++] = null !== $item ? QuerySendDetailsResponse\smsSendDetailDTOs\smsSendDetailDTO::fromMap($item) : $item;
+                    $model->smsSendDetailDTO[$n++] = null !== $item ? smsSendDetailDTO::fromMap($item) : $item;
                 }
             }
         }

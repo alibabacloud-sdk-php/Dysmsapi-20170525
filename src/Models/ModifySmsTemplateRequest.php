@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class QuerySendDetailsRequest extends Model
+class ModifySmsTemplateRequest extends Model
 {
     /**
      * @description appKey
@@ -37,57 +37,58 @@ class QuerySendDetailsRequest extends Model
     public $resourceOwnerId;
 
     /**
-     * @description phoneNumber
-     *
-     * @var string
-     */
-    public $phoneNumber;
-
-    /**
-     * @description bizId
-     *
-     * @var string
-     */
-    public $bizId;
-
-    /**
-     * @description sendDate
-     *
-     * @var string
-     */
-    public $sendDate;
-
-    /**
-     * @description pageSize
+     * @description templateType
      *
      * @var int
      */
-    public $pageSize;
+    public $templateType;
 
     /**
-     * @description currentPage
+     * @description templateName
      *
-     * @var int
+     * @var string
      */
-    public $currentPage;
+    public $templateName;
+
+    /**
+     * @description templateCode
+     *
+     * @var string
+     */
+    public $templateCode;
+
+    /**
+     * @description templateContent
+     *
+     * @var string
+     */
+    public $templateContent;
+
+    /**
+     * @description remark
+     *
+     * @var string
+     */
+    public $remark;
     protected $_name = [
         'accessKeyId'          => 'AccessKeyId',
         'ownerId'              => 'OwnerId',
         'resourceOwnerAccount' => 'ResourceOwnerAccount',
         'resourceOwnerId'      => 'ResourceOwnerId',
-        'phoneNumber'          => 'PhoneNumber',
-        'bizId'                => 'BizId',
-        'sendDate'             => 'SendDate',
-        'pageSize'             => 'PageSize',
-        'currentPage'          => 'CurrentPage',
+        'templateType'         => 'TemplateType',
+        'templateName'         => 'TemplateName',
+        'templateCode'         => 'TemplateCode',
+        'templateContent'      => 'TemplateContent',
+        'remark'               => 'Remark',
     ];
 
     public function validate()
     {
-        Model::validateRequired('phoneNumber', $this->phoneNumber, true);
-        Model::validateRequired('sendDate', $this->sendDate, true);
-        Model::validateRequired('pageSize', $this->pageSize, true);
-        Model::validateRequired('currentPage', $this->currentPage, true);
+        Model::validateRequired('templateType', $this->templateType, true);
+        Model::validateRequired('templateName', $this->templateName, true);
+        Model::validateRequired('templateCode', $this->templateCode, true);
+        Model::validateRequired('templateContent', $this->templateContent, true);
+        Model::validateRequired('remark', $this->remark, true);
     }
 
     public function toMap()
@@ -97,11 +98,11 @@ class QuerySendDetailsRequest extends Model
         $res['OwnerId']              = $this->ownerId;
         $res['ResourceOwnerAccount'] = $this->resourceOwnerAccount;
         $res['ResourceOwnerId']      = $this->resourceOwnerId;
-        $res['PhoneNumber']          = $this->phoneNumber;
-        $res['BizId']                = $this->bizId;
-        $res['SendDate']             = $this->sendDate;
-        $res['PageSize']             = $this->pageSize;
-        $res['CurrentPage']          = $this->currentPage;
+        $res['TemplateType']         = $this->templateType;
+        $res['TemplateName']         = $this->templateName;
+        $res['TemplateCode']         = $this->templateCode;
+        $res['TemplateContent']      = $this->templateContent;
+        $res['Remark']               = $this->remark;
 
         return $res;
     }
@@ -109,7 +110,7 @@ class QuerySendDetailsRequest extends Model
     /**
      * @param array $map
      *
-     * @return QuerySendDetailsRequest
+     * @return ModifySmsTemplateRequest
      */
     public static function fromMap($map = [])
     {
@@ -126,20 +127,20 @@ class QuerySendDetailsRequest extends Model
         if (isset($map['ResourceOwnerId'])) {
             $model->resourceOwnerId = $map['ResourceOwnerId'];
         }
-        if (isset($map['PhoneNumber'])) {
-            $model->phoneNumber = $map['PhoneNumber'];
+        if (isset($map['TemplateType'])) {
+            $model->templateType = $map['TemplateType'];
         }
-        if (isset($map['BizId'])) {
-            $model->bizId = $map['BizId'];
+        if (isset($map['TemplateName'])) {
+            $model->templateName = $map['TemplateName'];
         }
-        if (isset($map['SendDate'])) {
-            $model->sendDate = $map['SendDate'];
+        if (isset($map['TemplateCode'])) {
+            $model->templateCode = $map['TemplateCode'];
         }
-        if (isset($map['PageSize'])) {
-            $model->pageSize = $map['PageSize'];
+        if (isset($map['TemplateContent'])) {
+            $model->templateContent = $map['TemplateContent'];
         }
-        if (isset($map['CurrentPage'])) {
-            $model->currentPage = $map['CurrentPage'];
+        if (isset($map['Remark'])) {
+            $model->remark = $map['Remark'];
         }
 
         return $model;

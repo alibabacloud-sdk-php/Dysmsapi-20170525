@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class ModifySmsSignResponse extends Model
+class DeleteSmsSignResponse extends Model
 {
     /**
      * @description requestId
@@ -64,7 +64,7 @@ class ModifySmsSignResponse extends Model
     /**
      * @param array $map
      *
-     * @return ModifySmsSignResponse
+     * @return DeleteSmsSignResponse
      */
     public static function fromMap($map = [])
     {

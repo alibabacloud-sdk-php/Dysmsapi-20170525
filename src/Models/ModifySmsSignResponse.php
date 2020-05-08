@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class SendSmsResponse extends Model
+class ModifySmsSignResponse extends Model
 {
     /**
      * @description requestId
@@ -20,7 +20,7 @@ class SendSmsResponse extends Model
      *
      * @var string
      */
-    public $bizId;
+    public $signName;
 
     /**
      * @description code
@@ -37,7 +37,7 @@ class SendSmsResponse extends Model
     public $message;
     protected $_name = [
         'requestId' => 'RequestId',
-        'bizId'     => 'BizId',
+        'signName'  => 'SignName',
         'code'      => 'Code',
         'message'   => 'Message',
     ];
@@ -45,7 +45,7 @@ class SendSmsResponse extends Model
     public function validate()
     {
         Model::validateRequired('requestId', $this->requestId, true);
-        Model::validateRequired('bizId', $this->bizId, true);
+        Model::validateRequired('signName', $this->signName, true);
         Model::validateRequired('code', $this->code, true);
         Model::validateRequired('message', $this->message, true);
     }
@@ -54,7 +54,7 @@ class SendSmsResponse extends Model
     {
         $res              = [];
         $res['RequestId'] = $this->requestId;
-        $res['BizId']     = $this->bizId;
+        $res['SignName']  = $this->signName;
         $res['Code']      = $this->code;
         $res['Message']   = $this->message;
 
@@ -64,7 +64,7 @@ class SendSmsResponse extends Model
     /**
      * @param array $map
      *
-     * @return SendSmsResponse
+     * @return ModifySmsSignResponse
      */
     public static function fromMap($map = [])
     {
@@ -72,8 +72,8 @@ class SendSmsResponse extends Model
         if (isset($map['RequestId'])) {
             $model->requestId = $map['RequestId'];
         }
-        if (isset($map['BizId'])) {
-            $model->bizId = $map['BizId'];
+        if (isset($map['SignName'])) {
+            $model->signName = $map['SignName'];
         }
         if (isset($map['Code'])) {
             $model->code = $map['Code'];

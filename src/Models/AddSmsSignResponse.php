@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class ModifySmsTemplateResponse extends Model
+class AddSmsSignResponse extends Model
 {
     /**
      * @description requestId
@@ -20,7 +20,7 @@ class ModifySmsTemplateResponse extends Model
      *
      * @var string
      */
-    public $templateCode;
+    public $signName;
 
     /**
      * @description code
@@ -36,27 +36,27 @@ class ModifySmsTemplateResponse extends Model
      */
     public $message;
     protected $_name = [
-        'requestId'    => 'RequestId',
-        'templateCode' => 'TemplateCode',
-        'code'         => 'Code',
-        'message'      => 'Message',
+        'requestId' => 'RequestId',
+        'signName'  => 'SignName',
+        'code'      => 'Code',
+        'message'   => 'Message',
     ];
 
     public function validate()
     {
         Model::validateRequired('requestId', $this->requestId, true);
-        Model::validateRequired('templateCode', $this->templateCode, true);
+        Model::validateRequired('signName', $this->signName, true);
         Model::validateRequired('code', $this->code, true);
         Model::validateRequired('message', $this->message, true);
     }
 
     public function toMap()
     {
-        $res                 = [];
-        $res['RequestId']    = $this->requestId;
-        $res['TemplateCode'] = $this->templateCode;
-        $res['Code']         = $this->code;
-        $res['Message']      = $this->message;
+        $res              = [];
+        $res['RequestId'] = $this->requestId;
+        $res['SignName']  = $this->signName;
+        $res['Code']      = $this->code;
+        $res['Message']   = $this->message;
 
         return $res;
     }
@@ -64,7 +64,7 @@ class ModifySmsTemplateResponse extends Model
     /**
      * @param array $map
      *
-     * @return ModifySmsTemplateResponse
+     * @return AddSmsSignResponse
      */
     public static function fromMap($map = [])
     {
@@ -72,8 +72,8 @@ class ModifySmsTemplateResponse extends Model
         if (isset($map['RequestId'])) {
             $model->requestId = $map['RequestId'];
         }
-        if (isset($map['TemplateCode'])) {
-            $model->templateCode = $map['TemplateCode'];
+        if (isset($map['SignName'])) {
+            $model->signName = $map['SignName'];
         }
         if (isset($map['Code'])) {
             $model->code = $map['Code'];

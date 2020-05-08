@@ -2,7 +2,7 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi\AddSmsSignRequest;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models\AddSmsSignRequest;
 
 use AlibabaCloud\Tea\Model;
 

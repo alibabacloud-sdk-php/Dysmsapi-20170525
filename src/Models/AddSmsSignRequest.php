@@ -2,11 +2,12 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
+use AlibabaCloud\SDK\Dysmsapi\V20170525\Models\AddSmsSignRequest\signFileList;
 use AlibabaCloud\Tea\Model;
 
-class ModifySmsSignRequest extends Model
+class AddSmsSignRequest extends Model
 {
     /**
      * @description appKey
@@ -106,7 +107,7 @@ class ModifySmsSignRequest extends Model
     /**
      * @param array $map
      *
-     * @return ModifySmsSignRequest
+     * @return AddSmsSignRequest
      */
     public static function fromMap($map = [])
     {
@@ -134,7 +135,7 @@ class ModifySmsSignRequest extends Model
                 $model->signFileList = [];
                 $n                   = 0;
                 foreach ($map['SignFileList'] as $item) {
-                    $model->signFileList[$n++] = null !== $item ? ModifySmsSignRequest\signFileList::fromMap($item) : $item;
+                    $model->signFileList[$n++] = null !== $item ? signFileList::fromMap($item) : $item;
                 }
             }
         }

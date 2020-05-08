@@ -2,11 +2,11 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
 
 use AlibabaCloud\Tea\Model;
 
-class DeleteSmsSignRequest extends Model
+class QuerySmsTemplateRequest extends Model
 {
     /**
      * @description appKey
@@ -37,22 +37,22 @@ class DeleteSmsSignRequest extends Model
     public $resourceOwnerId;
 
     /**
-     * @description signName
+     * @description templateCode
      *
      * @var string
      */
-    public $signName;
+    public $templateCode;
     protected $_name = [
         'accessKeyId'          => 'AccessKeyId',
         'ownerId'              => 'OwnerId',
         'resourceOwnerAccount' => 'ResourceOwnerAccount',
         'resourceOwnerId'      => 'ResourceOwnerId',
-        'signName'             => 'SignName',
+        'templateCode'         => 'TemplateCode',
     ];
 
     public function validate()
     {
-        Model::validateRequired('signName', $this->signName, true);
+        Model::validateRequired('templateCode', $this->templateCode, true);
     }
 
     public function toMap()
@@ -62,7 +62,7 @@ class DeleteSmsSignRequest extends Model
         $res['OwnerId']              = $this->ownerId;
         $res['ResourceOwnerAccount'] = $this->resourceOwnerAccount;
         $res['ResourceOwnerId']      = $this->resourceOwnerId;
-        $res['SignName']             = $this->signName;
+        $res['TemplateCode']         = $this->templateCode;
 
         return $res;
     }
@@ -70,7 +70,7 @@ class DeleteSmsSignRequest extends Model
     /**
      * @param array $map
      *
-     * @return DeleteSmsSignRequest
+     * @return QuerySmsTemplateRequest
      */
     public static function fromMap($map = [])
     {
@@ -87,8 +87,8 @@ class DeleteSmsSignRequest extends Model
         if (isset($map['ResourceOwnerId'])) {
             $model->resourceOwnerId = $map['ResourceOwnerId'];
         }
-        if (isset($map['SignName'])) {
-            $model->signName = $map['SignName'];
+        if (isset($map['TemplateCode'])) {
+            $model->templateCode = $map['TemplateCode'];
         }
 
         return $model;
